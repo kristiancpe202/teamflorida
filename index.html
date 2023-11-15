@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <style>
+
+        /* HERO CONTAINER */
+        .hero {
+          width: 100%;
+          height: 100vh;
+          position: relative;
+          justify-content: center;
+          align-items: center;
+          display: flex;
+        } 
+        /* /////////////////////// */
+        
+        /* VIDEO */
+        .black-video {
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          z-index: -1;
+          width: 100%;
+        
+        }
+        /* ////////////////////////// */
+        
+        
+        /* navbar */
+         body {
+              margin: 0;
+              background-color: #f7f7f7;
+              font-family: Arial, Helvetica, sans-serif;
+            }
+            
+            #navbar {
+              background-color: rgba(51, 51, 51, 0.5);
+              position: fixed;
+              top: 0;
+              width: 100%;
+              display: block;
+              transition: top 0.3s;
+            }
+            
+            #navbar a {
+              float: left;
+              display: block;
+              color: #ffffff;
+              text-align: center;
+              padding: 15px;
+              text-decoration: none;
+              font-size: 15px;
+            }
+            
+            #navbar a:hover {
+              background-color: #ffffff;
+              color: black;
+            }
+        
+            @media screen and (max-width: 768px) {
+          nav {
+            padding: 20px 4%; 
+          }
+        
+          nav ul li {
+            margin-left: 10px; 
+          }
+        
+          .content h1 {
+            font-size: 8vw; 
+            
+          }
+        }
+        
+         /* //////////////////////////// */
+        
+        
+        /* BIG FLORIDA */
+        .hide {
+          text-align: center;
+         
+        }
+        
+        .hide h1 {
+          font-size: 160px; 
+          color: #ffffff;
+          font-weight: 600;
+        
+         
+        }
+        /* ///////////////////////// */
+        
+        
+        
+        
+        
+        /* 7 DESTINATION */
+              .container {
+                    position: relative;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+                    gap: 1em;
+                    width: 100%;
+                    height: 600px;
+                    font-family: "Figtree", sans-serif;
+                    transition: all 400ms;
+                    margin-top: 50px;
+                }
+        
+                .box {
+                    position: relative;
+                    background: var(--img) center center;
+                    background-size: cover;
+                    transition: all 400ms;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+        
+                .box::after {
+                    content: attr(data-text);
+                    position: absolute;
+                    bottom: 20px;
+                    background: #ffffff;
+                    color: #000000;
+                    padding: 10px 10px 10px 14px;
+                    letter-spacing: 4px;
+                    text-transform: uppercase;
+                    transform: translateY(60px);
+                    opacity: 0;
+                    transition: all 400ms;
+                }
+                .container:hover .box {
+                    filter: grayscale(100%) opacity(24%);
+                }
+                .box:hover::after {
+                    transform: translateY(0);
+                    opacity: 1;
+                    transition-delay: 400ms;
+                }
+        
+                .container .box:hover {
+                    filter: grayscale(0%) opacity(100%);
+                }
+                .container:has(.box-1:hover) {
+                    grid-template-columns: 3fr 1fr 1fr 1fr 1fr 1fr 1fr;
+                }
+                .container:has(.box-2:hover) {
+                    grid-template-columns: 1fr 3fr 1fr 1fr 1fr 1fr 1fr;
+                }
+                .container:has(.box-3:hover) {
+                    grid-template-columns: 1fr 1fr 3fr 1fr 1fr 1fr 1fr;
+                }
+                .container:has(.box-4:hover) {
+                    grid-template-columns: 1fr 1fr 1fr 3fr 1fr 1fr 1fr;
+                }
+                .container:has(.box-5:hover) {
+                    grid-template-columns: 1fr 1fr 1fr 1fr 3fr 1fr 1fr;
+                }
+                .container:has(.box-6:hover) {
+                    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 3fr 1fr;
+                }
+                .container:has(.box-7:hover) {
+                    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 3fr;
+                }
+        
+                .box:nth-child(odd) {
+                    transform: translateY(-16px);
+                }
+                .box:nth-child(even) {
+                    transform: translateY(16px);
+                }
+        /* ///////////////////////////////// */
+        
+        /* HISTORY */
+                .hi {
+                  margin-top: 20px;
+                  text-align: center;
+                }
+                .card {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 90%;
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+          padding: 32px;
+          overflow: hidden;
+          border-radius: 10px;
+          transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+                }
+        
+                  .content {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 20px;
+                    color: #0c0c0c;
+                    transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+                  }
+        
+                  .content .heading {
+                    font-weight: 700;
+                    font-size: 32px;
+                  }
+        
+                  .content .para {
+                    line-height: 1.5;
+                  }
+        
+        
+                  .card::before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 100%;
+                    height: 5px;
+                    background: linear-gradient(-45deg, rgb(248, 134, 41), #e9b817 100% );
+                    z-index: -1;
+                    transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+                  }
+        
+                  .card:hover::before {
+                    height: 100%;
+                  }
+        
+                  .card:hover {
+                    box-shadow: none;
+                  }
+                  .center {
+                    display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      margin-top: 200px;
+                  }
+        /* ///////////////////// */
+        
+        /* TIMELINE */
+                  .timeline {
+                    position: relative;
+                    max-width: 1200px;
+                    margin: 0 auto;
+                  }
+                  .timeline::after {
+                    content: '';
+                    position: absolute;
+                    width: 6px;
+                    background-color: white;
+                    top: 0;
+                    bottom: 0;
+                    left: 50%;
+                    margin-left: -3px;
+                  }
+                  .sold {
+                    padding: 10px 40px;
+                    position: relative;
+                    background-color: inherit;
+                    width: 50%;
+                  }
+                  .sold::after {
+                    content: '';
+                    position: absolute;
+                    width: 25px;
+                    height: 25px;
+                    right: -17px;
+                    background-color: white;
+                    border: 4px solid #ff6f01;
+                    top: 15px;
+                    border-radius: 50%;
+                    z-index: 1;
+                  }
+                  .left {
+                    left: 0;
+                  }
+                  .right {
+                    left: 50%;
+                  }
+                  .left::before {
+                    content: " ";
+                    height: 0;
+                    position: absolute;
+                    top: 22px;
+                    width: 0;
+                    z-index: 1;
+                    right: 30px;
+                    border: medium solid white;
+                    border-width: 10px 0 10px 10px;
+                    border-color: transparent transparent transparent white;
+                  }
+                  .right::before {
+                    content: " ";
+                    height: 0;
+                    position: absolute;
+                    top: 22px;
+                    width: 0;
+                    z-index: 1;
+                    left: 30px;
+                    border: medium solid white;
+                    border-width: 10px 10px 10px 0;
+                    border-color: transparent white transparent transparent;
+                  }
+                  .right::after {
+                    left: -16px;
+                  }
+                  .ish {
+                    padding: 20px 30px;
+                    background-color: white;
+                    position: relative;
+                    border-radius: 6px;
+                  }
+        /* ///////////////////////////////// */
+        @media screen and (max-width: 600px) {
+        
+          .timeline::after {
+            left: 31px;
+          }
+          .sold {
+            width: 100%;
+            padding-left: 70px;
+            padding-right: 25px;
+          }
+          .sold::before {
+            left: 60px;
+            border: medium solid white;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent white transparent transparent;
+          }
+          .left::after, .right::after {
+            left: 15px;
+          }
+          .right {
+            left: 0%;
+          }
+        }
+        </style>
+        </head>
+        <body>
+          <!-- VIDEO AND NAV -->
+         <div class="hero">
+          <video autoplay loop muted class="black-video">
+            <source  src="img/cool.mp4">
+          </video>
+          <div id="navbar">
+            <a href="index.html">Home</a>
+            <a href="aboutus.html">About Us</a>
+          </div >
+        <div class="hide">
+          <h1>FLORIDA BLANCA</h1>
+        </div>
+          </div>
+        </div>
+        <!-- ////////////////////////////////////////// -->
+        
+        <!-- 7DESTINATIONS -->
+        <div class="container">
+          <div class="box box-1" style="--img: url(./img/1.jpg);" data-text="Tung-ab Lagoon- Tung-ab Lagoon, nestled in the heart of Pampanga, Philippines, boasts a rich and captivating history that dates back centuries.Its story begins with the indigenous Aeta people who were the first to discover the lagoon's serene beauty and abundant natural resources. They referred to it as Tung-ab which in their language meant place of tranquility "></div>
+          <div class="box box-2" style="--img: url(./img/5.jpg);" data-text="Gumain Dam- Gumain Dam is a reservoir located in Floridablanca, Pampanga, Philippines. It's also sometimes referred to as Gumain River Dam. This dam plays a crucial role in the region's water supply and irrigation systems. It was constructed to control and manage the flow of the Gumain River, which is a tributary of the Pampanga River"></div>
+          <div class="box box-3" style="--img: url(./img/7.jpg);" data-text="Cesar Basa AirBase- Cesar Basa Air Base, located in Floridablanca, Pampanga, is a captivating tourist attraction that showcases the rich aviation history of the Philippines. Open to the public, it features vintage aircraft, exhibits, and interactive experiences. Visitors can explore the grounds, learn about wartime significance, and delve into the pioneering stories of Philippine aviation. With knowledgeable staff and well-maintained facilities, its a must-visit for aviation enthusiasts and history buffs in Floridablanca, Pampanga."></div>
+          <div class="box box-4" style="--img: url(./img/8.jpg);" data-text="Aqua Blanca Resort- Aqua Blanca Resort is a captivating tourist destination located in Floridablanca, Pampanga. Nestled amidst lush greenery and scenic landscapes, this resort offers a serene and rejuvenating getaway for travelers seeking tranquility. With its crystal-clear pools, soothing waterfalls, and pristine surroundings, Aqua Blanca Resort provides a refreshing escape from the bustling city life. Whether youre looking to relax by the poolside, indulge in delicious cuisine, or engage in exciting water activities, this resort has it all. Experience the perfect blend of nature and leisure at Aqua Blanca Resort in Floridablanca, Pampanga."></div>
+          <div class="box box-5" style="--img: url(./img/9.jpg);" data-text="Nabuclod Mountain- Nabuclod Mountain Views is a popular tourist attraction located in Floridablanca, Pampanga, Philippines. It offers breathtaking views of the Zambales mountain range, allowing visitors to see the town and city from above. The attraction has received rave reviews for its stunning natural beauty and tranquil atmosphere. Visitors are charged an entrance fee of 20 pesos per adult and 10 pesos per child, and overnight stays are permitted."></div>
+          <div class="box box-6" style="--img: url(./img/10.jpg);" data-text="Sumuclab Lagoon- Sumuclab Lagoon is a picturesque natural attraction located in Floridablanca, Pampanga, Philippines. This serene lagoon is nestled amid lush greenery, offering a tranquil escape from the hustle and bustle of city life. Visitors can enjoy its serene waters, which are ideal for swimming, boating, and picnicking. The surrounding landscape features beautiful flora and fauna, making it a popular spot for nature enthusiasts and photographers. Sumuclab Lagoon provides a peaceful retreat in the heart of Pampanga, perfect for relaxation and outdoor recreation."></div>
+          <div class="box box-7" style="--img: url(./img/11.jpg);" data-text="Palakol River- The Palakol River, also known as Gumain River, is a natural gem located in Floridablanca, Pampanga, Philippines. Nestled beneath the SCTEX Bridge, this picturesque river offers a refreshing escape for nature lovers. The river is renowned for its crystal clear water, which remains unaffected even during the scorching summer months. Visitors can enjoy the river's pool-like area upstream, where the water is free from rocks and gradually deepens. Downstream, there is a section with big rocks, adding to the river's charm. The Palakol River is often described as a natural water park, providing visitors with a tranquil and rejuvenating experience amidst the stunning Zambales mountain range."></div>
+              </div>  
+        <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////  -->
+        
+        <!-- HISTORY&TIMELINE -->
+              <div class="center">
+                <h1 class="hi">
+                  HISTORY OF FLORIDA BLANCA
+                </h1>
+                <div class="card">
+                  <div class="content">
+                    <p class="heading">HISTORY
+                    </p><p class="para">
+                      Before Floridablanca was founded, there were in existence and settlements within the area villages called “hacienda”. Hacienda is a Spanish word for estate, in the case of this town was a plantation estate belonging to the order of Saint Augustine.
+        The town was first established in 1823 as hacienda of Spanish friars. The mission was under the Parish of Lubao and supervised by a capellan (priest). There was a chapel with a capellan and the place was named Hacienda de San Jose de Calampaui in honor of Saint Joseph who eventually became the patron saint of the town.
+        Entries of the Capellanes in 1867 showed that “Hacienda de San Jose de Calampaui” was renamed in the same year as “Pueblo de Floridablanca”.
+        Floridablanca is a Spanish word for “MaputingSampaga” in the vernacular and “white flower” in English. However, there were two versions as to how the town got its name. One is that the name Floridablanca was in honor of a Conde de Floridablancawhom they believed visited the place and hunted wild games in the early 1800’s. But nowhere in the history of the Philippines was a certain Count by that name had ever visited the country.
+        The other one, which is regarded as more credible, is anchored on the existence of the lowly pandacaqui plant (Scientific name: taberrapandacaquipoir) which abound and thrived under the lush forest cover of the town during that period. The plant has plenty of white florescence and may grow up to eight feet when it reaches maturity. It is valued and is often used for its medicinal efficacy in treating different diseases. It is widely believed that what greeted the Spaniards when they set foot on this soil were myriad of white flowers of pandacaqui, thus the name Floridablanca.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="timeline">
+                <div class="sold left">
+                  <div class="ish">
+                    <h2>1920s</h2>
+                    <p>the Pampanga Sugar Mill (PASUMIL) was set up in Del Carmen that became a major sugar manufacturer in the Philippines.</p>
+                  </div>
+                </div>
+                <div class="sold right">
+                  <div class="ish">
+                    <h2>1940s</h2>
+                    <p>during World War II, the founding establishment of the local military general headquarters and camp bases of the Commonwealth Army of the Philippines was found active with the 2nd Infantry Regiment of the Philippine Constabulary military stationed in Floridablanca.</p>
+                  </div>
+                </div>
+                <div class="sold left">
+                  <div class="ish">
+                    <h2>1947</h2>
+                    <p>the Philippine Air Force established the Basa Air Base, a major fighter base in an American military airfield in the municipality.</p>
+                  </div>
+                </div>
+              </div>
+              <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        
+              <!-- footer -->
+              <footer>
+                <p>&copy; 2023 Floridablanca LANDING PAGE. All rights reserved.</p>
+              </footer>
+        <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        
+        
+              <script>
+                var prevScrollpos = window.pageYOffset;
+                window.onscroll = function() {
+                var currentScrollPos = window.pageYOffset;
+                  if (prevScrollpos > currentScrollPos) {
+                    document.getElementById("navbar").style.top = "0";
+                  } else {
+                    document.getElementById("navbar").style.top = "-50px";
+                  }
+                  prevScrollpos = currentScrollPos;
+                }
+                </script>    
+        </body>
+        </html>

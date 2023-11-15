@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <title>Document</title>
+    <style type="text/tailwindcss">
+        @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+        }
+      </style>
+</head>
+<!-- subukan nyo nalang white. alisin nyo lang class hehe ty -->
+
+
+<!-- <body> -->
+<body class="bg-gray-600 text-white">
+
+
+    
+    <div>
+   <section class="team">
+    <div class="container mx-auto py-2 flex justify-center">
+        <h1>OUR TEAM</h1>
+    </div>
+    </section>
+</div>
+
+
+<!-- pa lagay nalang yung picture nyo sa static files hehe -->
+<div>
+<div>
+    
+    <div class="grid grid-cols-auto min-w-0 gap-20">
+        <div class="flex space-x-20 justify-center">
+            <div class="card flex flex-col items-center justify-around w-64 py-20 px-50 my-4 text-center relative cursor-pointer shadow-lg rounded-lg bg-gradient-to-br from-black-900 via-black-500 to-black-900">
+                <div class="content p-4">
+                    <img src="1.jpg" alt="" class="rounded-full w-40 h-40 object-cover items-center">
+                    <div class="price text-white font-semibold text-4xl text-shadow-md">Jayson Reyes</div>
+                    <div class="description text-white-opacity-60 mt-2 text-sm">CTO</div>
+                    <div class="title text-white-opacity-64 mt-2 uppercase font-semibold text-lg tracking-wide">Group 5</div>
+                </div>
+            </div>
+
+            <div class="card flex flex-col items-center justify-center w-64 py-20 px-50 my-4 text-center relative cursor-pointer shadow-lg rounded-lg bg-gradient-to-br from-black-900 via-black-500 to-black-900">
+                <div class="content p-4">
+                    <img src="1.jpg" alt="" class="rounded-full w-40 h-40 object-cover self-center">
+                    <div class="price text-white font-semibold text-4xl text-shadow-md">Brienne David</div>
+                    <div class="description text-white-opacity-60 mt-2 text-sm">Senior web developer</div>
+                    <div class="title text-white-opacity-64 mt-2 uppercase font-semibold text-lg tracking-wide">Group 5</div>
+                </div>
+            </div>
+
+            <div class="card flex flex-col items-center justify-around w-64 py-20 px-50 my-4 text-center relative cursor-pointer shadow-lg rounded-lg bg-gradient-to-br from-black-900 via-black-500 to-black-900">
+                <div class="content p-4">
+                    <img src="1.jpg" alt="" class="rounded-full w-40 h-40 object-cover self-center">
+                    <div class="price text-white font-semibold text-4xl text-shadow-md">Justine Mallari</div>
+                    <div class="description text-white-opacity-60 mt-2 text-sm">Junior web developer</div>
+                    <div class="title text-white-opacity-64 mt-2 uppercase font-semibold text-lg tracking-wide">Group 5</div>
+                </div>
+            </div>
+            <div class="card flex flex-col items-center justify-around w-64 py-20 px-50 my-4 text-center relative cursor-pointer shadow-lg rounded-lg bg-gradient-to-br from-black-900 via-black-500 to-black-900">
+                <div class="content p-4">
+                    <img src="1.jpg" alt="" class="rounded-full w-40 h-40 object-cover self-center">
+                    <div class="price text-white font-semibold text-4xl text-shadow-md">MJ Guevara</div>
+                    <div class="description text-white-opacity-60 mt-2 text-sm">Junior web developer</div>
+                    <div class="title text-white-opacity-64 mt-2 uppercase font-semibold text-lg tracking-wide">Group 5</div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+            <!-- about us  you can change it if you like -->
+            <section>
+                <section class="team">
+                 <div class="container mx-auto py-2 flex justify-center">
+                     <h1>About us</h1>
+                 </div>
+                 <h1>Welcome to Guagua, Pampanga's premier web development team 
+                    dedicated to showcasing the beauty, culture, 
+                    and potential of this vibrant town on the digital stage.
+                    We are passionate web developers who have made it our mission 
+                    to promote Guagua, the hidden gem of the Philippines, to the world.</h1>
+                    
+                 </section>
+             </section>
+
+             <div>
+            <div class="grid grid-cols-auto min-w-0 gap-20">
+            <div class="flex space-x-20 justify-center">
+
+                <div class="card relative w-72 h-48 bg-gray-200 rounded-lg flex items-center justify-center shadow-md transform hover:scale-105 transition-transform hover:shadow-xl hover:bg-white">
+                    <img src="1.jpg" alt="Image Alt Text" class="w-24 h-24 rounded-full absolute top-2 left-2 border-2 border-white">
+                    <div class="card__content absolute top-0 left-0 w-full h-full p-4 bg-gray-200 transform -rotate-x-90 transition-transform origin-bottom">
+                      
+                    </div>
+                  </div>
+                  <div class="card relative w-72 h-48 bg-gray-200 rounded-lg flex items-center justify-center shadow-md transform hover:scale-105 transition-transform hover:shadow-xl hover:bg-white">
+                    <img src="path_to_your_image.jpg" alt="Image Alt Text" class="w-24 h-24 rounded-full absolute top-2 left-2 border-2 border-white">
+                    <div class="card__content absolute top-0 left-0 w-full h-full p-4 bg-gray-200 transform -rotate-x-90 transition-transform origin-bottom">
+                      
+                    </div>
+                  </div>
+                  <div class="card relative w-72 h-48 bg-gray-200 rounded-lg flex items-center justify-center shadow-md transform hover:scale-105 transition-transform hover:shadow-xl hover:bg-white">
+                    <img src="path_to_your_image.jpg" alt="Image Alt Text" class="w-24 h-24 rounded-full absolute top-2 left-2 border-2 border-white">
+                    <div class="card__content absolute top-0 left-0 w-full h-full p-4 bg-gray-200 transform -rotate-x-90 transition-transform origin-bottom">
+                      
+                    </div>
+                  </div>
+                                    
+
+
+             </div>
+
+            
+  
+</body>
+</html>
+<style>
+
+</style>
